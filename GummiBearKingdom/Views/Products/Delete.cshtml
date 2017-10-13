@@ -1,0 +1,29 @@
+﻿@model GummiBearKingdom.Models.Product
+
+@{ 
+    ViewData["Title"] = "Products - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex p-3 justify-content-center">
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="delete-label">Products - Delete</h4>
+        <img class="card-img-top product-images" src="@Url.Content(Model.ImageURL)" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
+            <p class="card-text">@Html.DisplayFor(model => model.Description)</p>
+        </div>
+        <div class="card-block ">
+            
+            @using (Html.BeginForm())
+            {
+                <button class="btn btn-warning button-editors" type="button" onclick="location.href='@Url.Action("Index")'">
+                    Cancel
+                </button>
+                <input class="btn btn-danger button-editors" type="submit" value="Confirm" />
+            }
+        </div>
+    </div>
+
+</div>

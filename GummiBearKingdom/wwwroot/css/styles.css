@@ -14,7 +14,7 @@
 }
 
 .card {
-    margin-top: 20px;
+    margin: 20px;
     text-align: center;
 }
 
@@ -38,4 +38,14 @@
 
 .button-create {
     margin: 4px;
+}
+
+.button-editors {
+   
+    width: 45%;
+}
+
+.delete-label {
+    background-color: #fff2fa;
+    padding: 5px;
 }
