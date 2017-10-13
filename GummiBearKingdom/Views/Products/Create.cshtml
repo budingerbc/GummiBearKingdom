@@ -1,0 +1,26 @@
+﻿@model GummiBearKingdom.Models.Product
+
+@{
+    ViewData["Title"] = "Gummy Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex p-3 justify-content-center">
+     @using (Html.BeginForm())
+     {
+        <div class="card" style="width: 30rem;">
+            <div class="card-block"><h1>Products - Create</h1></div>
+            <div class="card-block">
+                <div>@Html.LabelFor(model => model.Name)</div>
+                <div>@Html.EditorFor(model => model.Name)</div>
+           
+            </div>
+
+            <div class="card-block">
+                <div>@Html.LabelFor(model => model.Description)</div>
+                <div class="create-input">@Html.TextAreaFor(model => model.Description)</div>
+            </div>
+                <input class="btn btn-info button-create" type="submit" value="Create" />
+        </div>
+     }
+</div>

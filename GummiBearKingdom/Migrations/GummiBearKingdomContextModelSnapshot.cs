@@ -22,6 +22,8 @@ namespace GummiBearKingdom.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<string>("ImageURL");
+
                     b.Property<string>("Name");
 
                     b.HasKey("ProductId");
