@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex p-2 justify-content-center">
+    <div class="card" style="width: 40rem;">
+        <img class="card-img-top" src="~/img/GummyBearLogo.png" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">Welcome to the sweetest online shop!</h4>
+            <p class="card-text">Please peruse our products section to indulge in the finest gummy candies we have to offer.</p>
+
+            <button class="btn btn-info home-products-button" type="button" onclick="location.href='@Url.Action("Index", "Products")'">
+                Products
+            </button>
+        </div>
+    </div>
+</div>
+

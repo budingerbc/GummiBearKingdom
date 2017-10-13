@@ -46,10 +46,12 @@ namespace GummiBearKingdom
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Location}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
 
             loggerFactory.AddConsole();
+
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {

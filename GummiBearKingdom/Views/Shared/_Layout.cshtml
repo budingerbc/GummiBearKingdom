@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Gummi Bear Kingdom</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 </head>
 <body>
+
+    <div class="jumbotron">
+        <img src="~/img/gummyBearEmporium.png" />
+    </div>
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-brand">@Html.ActionLink("Home", "Index", "Home")</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active">@Html.ActionLink("Products", "Index", "Products")</a>
+            </div>
+    </nav>
+    
     <div class="container body-content">
    
         @RenderBody()
