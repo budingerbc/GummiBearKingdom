@@ -18,7 +18,13 @@ _A .NET mock website hosting gummy bear products.  Used for the practice of buil
 ##### Future functionality desired
 
 - User reviews in the product details page
-
+- Clicking on a product's image to see additional information such as
+  * price
+  * servings
+  * calories
+- Allowing users to upload their own pictures
+- Edit pictures when editing products
+- A cart system for ordering products with a subtotal
 ### _How to use_ ###
 
 1. Download project from GitHub: https://github.com/budingerbc/GummiBearKingdom
