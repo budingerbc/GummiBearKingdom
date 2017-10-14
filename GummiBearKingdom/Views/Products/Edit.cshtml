@@ -1,16 +1,25 @@
 ﻿@model GummiBearKingdom.Models.Product
 
-@{
-    ViewData["Title"] = "Gummy Products";
+@{ 
+    ViewData["Title"] = "Products - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="d-flex p-3 justify-content-center">
-    @using (Html.BeginForm())
-    {
-        <div class="card" style="width: 20rem;">
-            <h4 class="delete-label">Products - Create</h4>
+
+    <div class="card" style="width: 20rem;">
+        <h4 class="delete-label">Products - Edit</h4>
+        <img class="card-img-top product-images" src="@Url.Content(Model.ImageURL)" alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">@Html.DisplayFor(model => model.Name)</h4>
+            <p class="card-text">@Html.DisplayFor(model => model.Description)</p>
+        </div>
+
+        @using (Html.BeginForm())
+        {
             <div class="card-block">
+                @Html.HiddenFor(model => model.ImageURL)
+                @Html.HiddenFor(model => model.ProductId)
                 <div>@Html.LabelFor(model => model.Name)</div>
                 <div>@Html.EditorFor(model => model.Name)</div>
             </div>
@@ -21,12 +30,12 @@
             </div>
 
             <div class="card-block">
+                
                 <button class="btn btn-warning button-editors" type="button" onclick="location.href='@Url.Action("Index")'">
                     Cancel
                 </button>
-                <input class="btn btn-info button-editors" type="submit" value="Create" />
+                <input class="btn btn-info button-editors" type="submit" value="Save" />
             </div>
-        </div>
-
-    }
+        }
+    </div>
 </div>
